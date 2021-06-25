@@ -38,10 +38,6 @@
 
 .header__menu {
   min-height: inherit;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
