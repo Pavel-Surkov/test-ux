@@ -1,8 +1,111 @@
-body {
-  background-color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+//Fonts
+$font-stack-arial: "Arial", sans-serif;
+$font-stack-manrope: "Manrope", "Arial", sans-serif;
+
+//Colors
+$primary-links: #2698FC;
+$primary-white: #FFF;
+$primary-black: #000;
+$primary-background-blue: #F0FBFF;
+$primary-background-gray: rgba(255, 255, 255, 0.15);
+$primary-gray: #C6CCD1;
+$primary-font: #112230;
+$links-underline: #E0E6EB;
+$contacts-gray: #5D6266;
+
+.body {
+  font-family: $font-stack-arial;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $primary-font;
 }
 
-div {
-  background-color: white;
-  height: 100px;
+.header {
+  min-height: 90px;
+
+  &__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    min-height: inherit;
+  }
+
+  &__logo-box {
+    min-height: inherit;
+    display: grid;
+    align-items: center;
+    width: 370px/1170px*100%;
+  }
+
+  &__menu {
+    min-height: inherit;
+    flex-grow: 1;
+    display: grid;
+    align-items: center;
+
+    &__list {
+      padding-left: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    &__item {
+      list-style: none;
+      margin-right: 30px;
+    }
+
+    &__link {
+      position: relative;
+    }
+
+    &__link:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -8px;
+      left: 0;
+      background-color: $links-underline;
+    }
+
+    &__link[disabled] {
+      opacity: 0.3;
+    }
+
+    &__link[disabled]:after {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    min-height: inherit;
+    flex-grow: 1;
+    display: grid;
+    justify-items: end;
+    grid-template-rows: 49px 1fr;
+
+    &__phone {
+      margin-top: auto;
+      font-family: $font-stack-manrope;
+      font-size: 1.333em;
+      font-weight: 800;
+    }
+
+    &__media {
+      display: flex;
+      list-style: none;
+    }
+
+    &__link {
+      color: $contacts-gray;
+      font-size: 0.8em;
+      margin-left: 6px; 
+      line-height: 2;
+    }
+  }
 }
