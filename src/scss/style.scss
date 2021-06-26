@@ -16,6 +16,7 @@ $links-underline: #E0E6EB;
 $links-gray: #5D6266;
 $checkbox-background: #F2F5F7;
 $border-blue: #D2F3FE;
+$list-numbers: #989EA3;
 
 %checkback-on {
   border-radius: 50%;
@@ -304,7 +305,7 @@ $border-blue: #D2F3FE;
     }
 
     &__block {
-      padding: 35px 50px 48px 50px;
+      padding: 35px 50px 30px 50px;
       border: 1px solid $links-underline;
       border-radius: 20px;
     }
@@ -409,5 +410,57 @@ $border-blue: #D2F3FE;
         line-height: 1.33em;
       }
     }
+
+    &__lower {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 200px;
+    }
+
+    &__find {
+      
+
+      &-header {
+        font-family: $font-stack-manrope;
+        font-size: 1.33em;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+        margin-bottom: 20px;
+      }
+
+      &-list {
+        color: $list-numbers;
+        padding-left: 18px;
+      }
+
+      &-item {
+        font-size: 1.133em;
+        line-height: 1.47;
+      }
+
+      &-str {
+        color: $primary-font;
+        margin: 0;
+      }
+    }
+
+    &__service-code {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 1.133em;
+    }
+  }
+}
+
+.footer {
+  height: 100px;
+  margin-top: 220px;
+  padding-top: 58px;
+  width: 100%;
+  background-image: url('../background-imges/footer-bg.jpg');
+
+  &__wrapper {
+    padding: 0 calc(50% - 585px);
+    height: 100%;
   }
 }
