@@ -15,6 +15,15 @@ $primary-font: #112230;
 $links-underline: #E0E6EB;
 $links-gray: #5D6266;
 
+%checkback {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(180deg, #3D9FF5 0%, #4C2AD5 127.5%);
+}
+
+
+
 .body {
   font-family: $font-stack-arial;
   font-size: 15px;
@@ -152,7 +161,7 @@ $links-gray: #5D6266;
   }
 }
 
-.main {
+.instruction {
   padding: 0 calc(50% - 585px);
 
   &__header {

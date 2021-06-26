@@ -163,12 +163,12 @@
   font-size: 0.8em;
 }
 
-.main {
+.instruction {
   padding: 0 -webkit-calc(50% - 585px);
   padding: 0 calc(50% - 585px);
 }
 
-.main__header {
+.instruction__header {
   padding-top: 48px;
   font-family: "Manrope", "Arial", sans-serif;
   font-size: 3.33em;
