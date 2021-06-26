@@ -19,6 +19,16 @@
   border: 1px solid #E0E6EB;
 }
 
+.header__menu__link::after, .breadcrumbs__item:before, .footer__confidentiality::after, .footer__website::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -8px;
+  left: 0;
+  background-color: #E0E6EB;
+}
+
 .body {
   font-family: "Arial", sans-serif;
   font-size: 15px;
@@ -83,21 +93,11 @@
   position: relative;
 }
 
-.header__menu__link:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: -8px;
-  left: 0;
-  background-color: #E0E6EB;
-}
-
 .header__menu__link[disabled] {
   opacity: 0.3;
 }
 
-.header__menu__link[disabled]:after {
+.header__menu__link[disabled]::after {
   display: none;
 }
 
@@ -157,13 +157,7 @@
 }
 
 .breadcrumbs__item:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
   bottom: -2px;
-  left: 0;
-  background-color: #E0E6EB;
 }
 
 .breadcrumbs__item::after {
@@ -434,6 +428,11 @@
   margin: -4px 0 0 10px;
 }
 
+.main__final__email {
+  color: #2698FC;
+  text-decoration: underline;
+}
+
 .main__final__comment {
   margin-top: 30px;
   -webkit-border-radius: 10px;
@@ -502,6 +501,52 @@
   padding: 0 -webkit-calc(50% - 585px);
   padding: 0 calc(50% - 585px);
   height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 52px;
+      grid-template-rows: 1fr 52px;
+}
+
+.footer__bottom {
+  padding-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__ie {
+  margin: auto 0;
+  color: #FFF;
+  line-height: 1.333em;
+  opacity: 0.5;
+}
+
+.footer__confidentiality {
+  margin: auto 0;
+  color: #FFF;
+  line-height: 1.333em;
+  margin-left: auto;
+  position: relative;
+  opacity: 0.5;
+}
+
+.footer__website {
+  margin: auto 0;
+  color: #FFF;
+  line-height: 1.333em;
+  margin-left: 15px;
+  opacity: 0.5;
+  position: relative;
+}
+
+.footer__confidentiality::after, .footer__website::after {
+  opacity: 0.15;
+}
+
+.footer__confidentiality:hover, .footer__website:hover {
+  opacity: 1;
+  color: #FFF;
 }
 
 .footer-bg__left {

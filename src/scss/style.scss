@@ -33,6 +33,16 @@ $list-numbers: #989EA3;
   border: 1px solid $links-underline;
 }
 
+%underline {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -8px;
+  left: 0;
+  background-color: $links-underline;
+}
+
 .body {
   font-family: $font-stack-arial;
   font-size: 15px;
@@ -78,21 +88,15 @@ $list-numbers: #989EA3;
       position: relative;
     }
 
-    &__link:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: -8px;
-      left: 0;
-      background-color: $links-underline;
+    &__link::after {
+      @extend %underline;
     }
 
     &__link[disabled] {
       opacity: 0.3;
     }
 
-    &__link[disabled]:after {
+    &__link[disabled]::after {
       display: none;
     }
   }
@@ -143,13 +147,8 @@ $list-numbers: #989EA3;
   }
 
   &__item:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
+    @extend %underline;
     bottom: -2px;
-    left: 0;
-    background-color: $links-underline;
   }
 
   &__item::after {
@@ -398,6 +397,11 @@ $list-numbers: #989EA3;
       margin: -4px 0 0 10px;
     }
 
+    &__email {
+      color: $primary-links;
+      text-decoration: underline;
+    }
+
     &__comment {
       margin-top: 30px;
       border-radius: 10px;
@@ -467,7 +471,57 @@ $list-numbers: #989EA3;
   &__wrapper {
     padding: 0 calc(50% - 585px);
     height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 52px;
   }
+
+  &__bottom {
+    padding-left: 4px;
+    display: flex;
+  }
+
+  &__ie {
+    margin: auto 0;
+    color: $primary-white;
+    line-height: 1.333em;
+    opacity: 0.5;
+  }
+
+  &__confidentiality {
+    margin: auto 0;
+    color: $primary-white;
+    line-height: 1.333em;
+    margin-left: auto;
+    position: relative;
+    opacity: 0.5;
+  }
+
+  &__website {
+    margin: auto 0;
+    color: $primary-white;
+    line-height: 1.333em;
+    margin-left: 15px;
+    opacity: 0.5;
+    position: relative;
+  }
+
+  &__confidentiality::after,
+  &__website::after {
+    @extend %underline;
+    opacity: 0.15;
+  }
+
+  &__confidentiality:hover,
+  &__website:hover {
+    opacity: 1;
+    color: $primary-white;
+  }
+
+
+
+
+
+
 
   &-bg {
 
