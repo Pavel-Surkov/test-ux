@@ -91,6 +91,7 @@ $links-gray: #5D6266;
       font-family: $font-stack-manrope;
       font-size: 1.333em;
       font-weight: 800;
+      letter-spacing: -0.2px;
     }
 
     &__media {
@@ -107,14 +108,11 @@ $links-gray: #5D6266;
   }
 }
 
-.main {
-  padding: 0 calc(50% - 585px);
-}
-
 .breadcrumbs {
-  padding: 5px 0;
+  padding: 5px 0 0 0;
   display: flex;
   list-style: none;
+  margin-bottom: 0;
 
   &__item {
     margin-right: 20px;
@@ -151,5 +149,17 @@ $links-gray: #5D6266;
   &__link {
     color: $links-gray;
     font-size: 0.8em;
+  }
+}
+
+.main {
+  padding: 0 calc(50% - 585px);
+
+  &__header {
+    padding-top: 48px;
+    font-family: $font-stack-manrope;
+    font-size: 3.33em;
+    font-weight: 800;
+    letter-spacing: -1.5px;
   }
 }
