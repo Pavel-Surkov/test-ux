@@ -52,7 +52,8 @@
         </div>
       </div>
     </header>
-    <main class="instruction">
+    <!-- React.Component -->
+    <main class="main">
       <ol class="breadcrumbs">
         <li class="breadcrumbs__item">
           <a href="#" class="breadcrumbs__link">Главная</a>
@@ -61,13 +62,49 @@
           <a href="#" class="breadcrumbs__link" active>Оплатить курс</a>
         </li>
       </ol>
-      <h1 class="instruction__header">Оплатить курс</h1>
-      <section class="instruction__course"></section>
-      <section class="instruction__"></section>
-      <section></section>
+      <h1 class="main__header">Оплатить курс</h1>
+      <section class="main__course">
+        <h2 class="main__course__header">1. Выберите тип курса</h2>
+        <div class="main__course__select-wrapper col-lg-6">
+          <select name="course" class="main__course__select">
+            <option value="Дизайнер мобильных приложений">Дизайнер мобильных приложений</option>
+            <option value="Web дизайнер">Web дизайнер</option>
+            <option value="Frontend разработчик">Frontend разработчик</option>
+          </select>
+        </div>
+      </section>
+      <section class="main__payment col-lg-9">
+        <h2 class="main__payment__header">2. Выберите способ оплаты</h2>
+        <div class="main__payment__methods">
+          <article class="main__payment__block col-lg-4" data-value="ЕРИП" checked>
+            <p class="main__payment__method">ЕРИП</p>
+            <div class="main__payment__radio"></div>
+          </article>
+          <article class="main__payment__block col-lg-4" data-value="кредит от Альфа-банка">
+            <p class="main__payment__method">Кредит </br>от Альфа-банка</p>
+            <div class="main__payment__radio"></div>
+          </article>
+          <article class="main__payment__block col-lg-4" data-value="рассрочку">
+            <p class="main__payment__method">Рассрочка </br>от 2 до 9 месяцев </br>по карте «Халва»</p>
+            <div class="main__payment__radio"></div>
+          </article>
+          <article class="main__payment__block col-lg-4" data-value="отделение банка">
+            <p class="main__payment__method">В отделении банка</p>
+            <div class="main__payment__radio"></div>
+          </article>
+          <article class="main__payment__block col-lg-4" data-value="карту">
+            <p class="main__payment__method">Оплатить картой</p>
+            <div class="main__payment__radio"></div>
+          </article>        
+        </div>
+      </section>
+      <section class="main__final">
+        <h2 class="main__final__header">3. Как оплатить через ЕРИП</h2>
+        
+      </section>
     </main>
+    <!-- /React.component -->
     <footer class="footer"></footer>
-
     <script type="text/babel" src="../src/index.js" ></script>
   </body>
 </html>

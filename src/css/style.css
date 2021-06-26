@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+.main__payment__block[checked] .main__payment__radio {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3D9FF5), color-stop(127.5%, #4C2AD5));
+  background: -webkit-linear-gradient(top, #3D9FF5 0%, #4C2AD5 127.5%);
+  background: -o-linear-gradient(top, #3D9FF5 0%, #4C2AD5 127.5%);
+  background: linear-gradient(180deg, #3D9FF5 0%, #4C2AD5 127.5%);
+}
+
+.main__payment__radio {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid #E0E6EB;
+}
+
 .body {
   font-family: "Arial", sans-serif;
   font-size: 15px;
@@ -163,16 +183,147 @@
   font-size: 0.8em;
 }
 
-.instruction {
+.main {
   padding: 0 -webkit-calc(50% - 585px);
   padding: 0 calc(50% - 585px);
 }
 
-.instruction__header {
+.main__header {
   padding-top: 48px;
   font-family: "Manrope", "Arial", sans-serif;
   font-size: 3.33em;
   font-weight: 800;
   letter-spacing: -1.5px;
+}
+
+.main__course {
+  padding-top: 41px;
+}
+
+.main__course__header {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 1.867em;
+  margin-bottom: 23px;
+  letter-spacing: -0.9px;
+}
+
+.main__course__select {
+  border: 1px solid #E0E6EB;
+  height: 50px;
+  width: 100%;
+  font-size: 1.133em;
+  font-family: "Arial", sans-serif;
+  padding-left: 15px;
+  padding-right: 54px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.main__course__select-wrapper {
+  position: relative;
+  max-width: 570px;
+}
+
+.main__course__select-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  pointer-events: none;
+  background: url("../background-imges/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main__payment {
+  padding-top: 52px;
+}
+
+.main__payment__header {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 1.867em;
+  letter-spacing: -0.9px;
+  margin-bottom: -7px;
+}
+
+.main__payment__methods {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.main__payment__block {
+  position: relative;
+  min-height: 160px;
+  max-width: 270px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #E0E6EB;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  margin: 30px 30px 0 0;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.main__payment__block:nth-child(3n) {
+  margin-right: 0;
+}
+
+.main__payment__radio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.main__payment__block[checked] {
+  border: 1px solid #2698FC;
+}
+
+.main__payment__block[checked] .main__payment__radio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.main__payment__block[checked] .main__payment__radio::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../background-imges/checkbox.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main__payment__method {
+  margin: 0;
+  font-size: 1.133em;
+  text-align: center;
+  line-height: 1.47;
+}
+
+.main__final {
+  padding-top: 54px;
+}
+
+.main__final__header {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 1.867em;
+  letter-spacing: -0.9px;
 }
 /*# sourceMappingURL=style.css.map */
