@@ -14,6 +14,8 @@ $primary-gray: #C6CCD1;
 $primary-font: #112230;
 $links-underline: #E0E6EB;
 $links-gray: #5D6266;
+$checkbox-background: #F2F5F7;
+$border-blue: #D2F3FE;
 
 %checkback-on {
   border-radius: 50%;
@@ -292,11 +294,120 @@ $links-gray: #5D6266;
 
   &__final {
     padding-top: 54px;
+    max-width: 870px;
 
     &__header {
       font-family: $font-stack-manrope;
       font-size: 1.867em;
       letter-spacing: -0.9px;
+      margin-bottom: 23px;
+    }
+
+    &__block {
+      padding: 35px 50px 48px 50px;
+      border: 1px solid $links-underline;
+      border-radius: 20px;
+    }
+
+    &__sum {
+      color: $links-gray;
+      font-size: 1.133em;
+      margin-bottom: 20px;
+    }
+
+    &__cost {
+      height: 1em;
+      font-size: 2.667em;
+      font-weight: 800;
+      font-family: $font-stack-manrope;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    &__promo {
+      color: $primary-links;
+      border-bottom: 1px dashed $primary-links;
+    }
+
+    &__bonus {
+      margin-top: 54px;
+    }
+
+    &__row {
+      margin-bottom: 24px;
+      display: flex;
+    }
+
+    &__label {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 10px;
+      margin-left: 4px;
+    }
+
+    &__label:last-child {
+      margin-bottom: 0;
+      display: flex;
+    }
+
+    &__checkbox {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    &__slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $checkbox-background;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    &__slider::before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: -5px;
+      bottom: -5px;
+      background-color: $primary-gray;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    &__checkbox:checked + .main__final__slider {
+      background-color: #2196F3;
+    }
+
+    &__checkbox:checked + .main__final__slider::before {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+
+    &__text {
+      margin: -4px 0 0 10px;
+    }
+
+    &__comment {
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color: $primary-background-blue;
+      border: 1px solid #D2F3FE;
+      height: 70px;
+      padding: 15px 24px;
+
+      &-text {
+        line-height: 1.33em;
+      }
     }
   }
 }
