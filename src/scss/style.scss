@@ -453,14 +453,46 @@ $list-numbers: #989EA3;
 }
 
 .footer {
-  height: 100px;
+  position: relative;
+  bottom: 0;
   margin-top: 220px;
   padding-top: 58px;
   width: 100%;
   background-image: url('../background-imges/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+  overflow: hidden;
 
   &__wrapper {
     padding: 0 calc(50% - 585px);
     height: 100%;
+  }
+
+  &-bg {
+
+    &__left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__center {
+      position: absolute;
+      top: 0;
+      left: 308px
+    }
+
+    &__right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__top-right {
+      position: absolute;
+      top: 0;
+      right: 407px;
+    }
   }
 }
