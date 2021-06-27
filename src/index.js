@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/normalize.css';
 import './css/style.css';
+import Payment from './jsx/payment';
 
 
 (async function getData() {
@@ -32,3 +33,5 @@ checkboxesBlock.addEventListener('click', e => {
     finalHeader.innerHTML = `3. Как оплатить через ${value}`;
   }
 });
+
+ReactDOM.render(<Payment />, document.getElementById('main'));
