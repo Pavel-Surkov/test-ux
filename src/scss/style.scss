@@ -365,8 +365,8 @@ $list-numbers: #989EA3;
       right: 0;
       bottom: 0;
       background-color: $checkbox-background;
-      -webkit-transition: .4s;
-      transition: .4s;
+      -webkit-transition: .3s;
+      transition: .3s;
       border-radius: 34px;
     }
 
@@ -378,8 +378,8 @@ $list-numbers: #989EA3;
       left: -5px;
       bottom: -5px;
       background-color: $primary-gray;
-      -webkit-transition: .4s;
-      transition: .4s;
+      -webkit-transition: .3s;
+      transition: .3s;
       border-radius: 34px;
     }
 
@@ -520,6 +520,7 @@ $list-numbers: #989EA3;
 
   &__container {
     z-index: 1;
+    display: flex;
   }
 
   &__media {
@@ -587,8 +588,96 @@ $list-numbers: #989EA3;
     }
   }
 
+  &__navigation {
+    display: flex;
+    margin-right: auto;
 
+    &__list {
+      padding: 0;
+      list-style: none;
+      padding-left: 7px;
+      flex-grow: 1;
+    }
 
+    &__list:last-child {
+      max-width: 224px;
+    }
+
+    &__item {
+      padding: 10px 0; 
+    }
+
+    &__item:first-child {
+      padding-top: 4px;
+    }
+
+    &__link {
+      margin: 0;
+      color: $primary-white;
+      position: relative;
+    }
+
+    &__link:hover {
+      opacity: 0.5;
+      color: $primary-white;
+    }
+
+    &__link::after {
+      @extend %underline;
+      opacity: 0.2;
+    }
+  }
+
+  &__additional {
+    width: 420px;
+    padding-top: 6px;
+
+    &__registry {
+      opacity: 0.7;
+      font-size: 0.8em;
+      color: $primary-white;
+      margin-bottom: 3px;
+    }
+
+    &__text {
+      opacity: 0.7;
+      font-size: 0.8em;
+      color: $primary-white;
+      line-height: 1.3;
+      margin-bottom: 2px;
+    }
+
+    &__links {
+      margin-bottom: 52px;
+    }
+
+    &__link {
+      opacity: 0.7;
+      font-size: 0.8em;
+      position: relative;
+      color: $primary-white;
+      margin-left: 2px;
+    }
+
+    &__link:first-child {
+      margin-left: 0;
+    }
+
+    &__link:hover {
+      color: $primary-white;
+      opacity: 1;
+    }
+
+    &__link::after {
+      @extend %underline;
+      opacity: 0.4;
+      bottom: -2px;
+    }
+
+    &__payment-row {
+      margin-bottom: 14px;
+    }
+  }
 
 
   &-bg {
