@@ -8,5 +8,5 @@ export default function FirstStep(props) {
         <Select courses={props.courses} />
       </div>
     </section>
-);
+  );
 }
