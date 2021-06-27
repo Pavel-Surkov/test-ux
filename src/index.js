@@ -34,4 +34,4 @@ checkboxesBlock.addEventListener('click', e => {
   }
 });
 
-ReactDOM.render(<Payment />, document.getElementById('main'));
+//ReactDOM.render(<Payment />, document.getElementById('main'));
