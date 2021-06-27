@@ -15,23 +15,4 @@ import Payment from './jsx/payment';
   }
 })();
 
-const checkboxes = document.querySelectorAll('.main__payment__block');
-const checkboxesBlock = document.querySelector('.main__payment__methods');
-const finalHeader = document.querySelector('.main__final__header');
-
-checkboxesBlock.addEventListener('click', e => {
-  const target = e.target.closest('article');
-  if(target == null) return false;
-  if(target.hasAttribute('checked')) {
-    e.preventDefault();
-  } else {
-    checkboxes.forEach(el => {
-      if(el.hasAttribute('checked')) el.removeAttribute('checked');
-    });
-    target.setAttribute('checked', '');
-    const value = target.dataset.value;
-    finalHeader.innerHTML = `3. Как оплатить через ${value}`;
-  }
-});
-
 //ReactDOM.render(<Payment />, document.getElementById('main'));

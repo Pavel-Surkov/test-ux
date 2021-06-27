@@ -25,15 +25,19 @@ export default function PaymentInstruction() {
   const handleClickCheckbox = e => {
     const checkboxes = document.querySelectorAll('.main__payment__block');
     const finalHeader = finalHeaderRef.current;
-
     const target = e.target.closest('article');
+
     if(target == null) return false;
+
     if(target.hasAttribute('checked')) {
       e.preventDefault();
     } else {
       checkboxes.forEach(el => {
-        if(el.hasAttribute('checked')) el.removeAttribute('checked');
+        if(el.hasAttribute('checked')) {
+          el.removeAttribute('checked');
+        }
       });
+      
       target.setAttribute('checked', '');
       const value = target.dataset.value;
       finalHeader.innerHTML = `3. Как оплатить через ${value}`;

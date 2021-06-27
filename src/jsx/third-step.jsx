@@ -1,4 +1,4 @@
-
+import FinalBlock from "./lower order/final-block";
 
 export default function ThirdStep(props) {
   return (
@@ -7,6 +7,7 @@ export default function ThirdStep(props) {
         ref={ props.finalHeaderRef }>
         3. Как оплатить через ЕРИП
       </h2>
+      <FinalBlock />
     </section>
   );
 }
