@@ -13,10 +13,10 @@ export default function PaymentInstruction() {
 
   useEffect( async () => {
     const response = await fetch('./json/data.json');
+
     if(response.ok) {
       const json = await response.json();
       setData(json);
-      console.log(json)
     } else {
       alert("Error: " + response.status);
     }

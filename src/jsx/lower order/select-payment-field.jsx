@@ -10,7 +10,7 @@ export default function SelectPaymentField(props) {
         return (
           <article 
             className="main__payment__block col-lg-4" 
-            dataValue={value} 
+            data-value={value} 
             onClick={ props.onClick }
             key={value}>
             <p className="main__payment__method">{method}</p>
