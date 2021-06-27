@@ -488,7 +488,7 @@
   position: relative;
   bottom: 0;
   margin-top: 220px;
-  padding-top: 58px;
+  padding-top: 60px;
   width: 100%;
   background-image: url("../background-imges/footer-bg.jpg");
   background-repeat: no-repeat;
@@ -513,6 +513,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
 }
 
 .footer__ie {
@@ -547,6 +548,84 @@
 .footer__confidentiality:hover, .footer__website:hover {
   opacity: 1;
   color: #FFF;
+}
+
+.footer__container {
+  z-index: 1;
+}
+
+.footer__media-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 19px;
+}
+
+.footer__media-link {
+  margin-right: 3px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 7.5px;
+          border-radius: 7.5px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer__rating {
+  background-color: rgba(255, 255, 255, 0.15);
+  max-width: 210px;
+  height: 100px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin-top: 30px;
+  padding: 15px 15px 12px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.footer__rating::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  right: 10px;
+  background-image: url("../background-imges/footer-link.svg");
+  background-repeat: no-repeat;
+}
+
+.footer__rating__number {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 1.867em;
+  color: #FFF;
+  letter-spacing: -0.3px;
+}
+
+.footer__rating__stars {
+  height: 20px;
+  margin-left: 6px;
+  width: 95px;
+  background-image: url("../background-imges/rate-star.svg");
+  background-position: left center;
+  background-repeat: space no-repeat;
+  -webkit-background-size: 16px 16px;
+          background-size: 16px;
+}
+
+.footer__rating__text {
+  margin-top: 8px;
+  color: #FFF;
+  font-size: 0.8em;
+  line-height: 1.26;
 }
 
 .footer-bg__left {
