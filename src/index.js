@@ -20,7 +20,7 @@ const checkboxesBlock = document.querySelector('.main__payment__methods');
 const finalHeader = document.querySelector('.main__final__header');
 
 checkboxesBlock.addEventListener('click', e => {
-  const target = e.target.closest('article');
+  const target = e.target.closest('label');
   if(target == null) return false;
   if(target.hasAttribute('checked')) {
     e.preventDefault();
