@@ -1,7 +1,17 @@
-export default function FinalBlock(props) {
+export default function FinalBlock() {
+  const listItems = [
+    'Пункт Система «Расчет» (ЕРИП)',
+    'Образование и развитие',
+    'Дополнительное образование и развитие',
+    'Тренинги, семинары, консультации',
+    'Минск',
+    'ИП Колесень И.Г.',
+    'Посещение занятий',
+    'Ввести ФИО ученика и сумму для оплаты'
+  ];
 
   return (
-    <div classNameName="main__final__block">
+    <div className="main__final__block">
       <p className="main__final__sum">Сумма для оплаты</p>
       <p className="main__final__cost">790 BYN</p>
       <a href="#" className="main__final__promo">У меня есть промо-код</a>
@@ -9,45 +19,42 @@ export default function FinalBlock(props) {
       <div className="main__final__comment">
         <p className="main__final__comment-text">*Скидки не суммируются. <br/>После внесения платежа, отправьте копию квитанции на <a className="main__final__email" href="mailto:hello@ux-school.by">hello@ux-school.by</a></p>
       </div>
+      <FinalLower items={listItems}/>
     </div>
-      // <div className="main__final__lower">
-      //   <div className="main__final__find-us">
-      //     <h3 className="main__final__find-header">Как найти нас в ЕРИП:</h3>
-      //     <ol className="main__final__find-list">
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Пункт Система «Расчет» (ЕРИП)</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Образование и развитие</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Дополнительное образование и развитие</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Тренинги, семинары, консультации</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Минск</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">ИП Колесень И.Г.</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Посещение занятий</p>
-      //       </li>
-      //       <li className="main__final__find-item">
-      //         <p className="main__final__find-str">Ввести ФИО ученика и сумму для оплаты</p>
-      //       </li>
-      //     </ol>
-      //   </div>
-      //   <div className="main__final__code">
-      //     <img className="main__final__qr" src="./img/qr.png" width="200" alt="QR code">
-      //     <p className="main__final__service-code">Код услуги: 4725501</p>
-      //   </div> 
-      // </div>
-    
   );
 }
+
+function FinalLower(props) {
+  return (
+    <div className="main__final__lower">
+        <LeftColList items={props.items}/>
+        <div className="main__final__code">
+          <img className="main__final__qr" src="./img/qr.png" width="200" alt="QR code" />
+          <p className="main__final__service-code">Код услуги: 4725501</p>
+        </div> 
+      </div>
+  );
+}
+
+function LeftColList(props) {
+  const items = props.items
+
+  return (
+    <div className="main__final__find-us">
+      <h3 className="main__final__find-header">Как найти нас в ЕРИП:</h3>
+      <ol className="main__final__find-list">
+        { items.map( value => {
+          return (
+            <li className="main__final__find-item" key={value}>
+              <p className="main__final__find-str">{value}</p>
+            </li>
+          );
+        }) }
+      </ol>
+    </div>
+  );
+}
+
 
 function Bonuses() {
   return (
