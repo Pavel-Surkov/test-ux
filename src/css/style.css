@@ -310,6 +310,7 @@
   font-size: 1.133em;
   text-align: center;
   line-height: 1.47;
+  max-width: 150px;
 }
 
 .main__final {
