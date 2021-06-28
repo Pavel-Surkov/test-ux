@@ -3,14 +3,16 @@ import FirstStep from "./first-step";
 import SecondStep from "./second-step";
 import ThirdStep from "./third-step";
 
-export default function PaymentInstruction() {
+export default function PaymentInstructionBlock() {
   const [data, setData] = useState({
     'courseType': [],
     'paymentMethods': []
   });
 
+  //Создает реф для заголовка пункта оплаты, чтобы изменять его через чекбоксы
   const finalHeaderRef = useRef(null);
 
+  //Получает данные из локального json
   useEffect(() => {
     (async () => {
       const response = await fetch('./json/data.json');
@@ -24,12 +26,13 @@ export default function PaymentInstruction() {
     })();
   }, [])
 
+  //Реализует переключение чекбоксов
   const handleClickCheckbox = e => {
     const checkboxes = document.querySelectorAll('.main__payment__block');
     const finalHeader = finalHeaderRef.current;
-    const target = e.target.closest('article');
+    const target = e.target.closest('label');
 
-    if(target == null) return false;
+    if(target === null) return false;
 
     if(target.hasAttribute('checked')) {
       e.preventDefault();
@@ -48,7 +51,7 @@ export default function PaymentInstruction() {
 
   return (
     <>
-      <FirstStep courses={data['courseType']} />
+      <FirstStep courses={data['courseType']} />{/*Передают данные из json как пропсы*/}
       <SecondStep payMethods={data['paymentMethods']} onClick={ e => handleClickCheckbox(e) } />
       <ThirdStep finalHeaderRef={ finalHeaderRef } />
     </>

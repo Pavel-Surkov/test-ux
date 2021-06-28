@@ -281,6 +281,9 @@
   position: absolute;
   top: 15px;
   right: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .main__payment__block[checked] {

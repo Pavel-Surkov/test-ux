@@ -14,14 +14,14 @@ export default function SelectPaymentField(props) {
         }
 
         return (
-          <article 
+          <label
             className="main__payment__block col-lg-4" 
             data-value={value} 
             onClick={ props.onClick }
             key={value}>
             <p className="main__payment__method" dangerouslySetInnerHTML={{__html: method}}></p>
-            <div className="main__payment__radio"></div>
-          </article> 
+            <input type="radio" className="main__payment__radio" name="payment" value={index + 1}/>
+          </label> 
         );
       }) }      
     </div>
