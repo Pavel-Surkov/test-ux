@@ -1,6 +1,12 @@
 export default function SelectPaymentField(props) {
   const methods = props.payMethods;
-  const values = ['ЕРИП', 'кредит от Альфа-банка', 'расссрочку', 'отделение банка', 'картой'];
+  const values = [
+    'через ЕРИП', 
+    'через кредит от Альфа-банка', 
+    'через рассрочку по карте "Халва"', 
+    'в банковском отделении', 
+    'картой'
+  ];
 
   return (
     <div className="main__payment__methods">
