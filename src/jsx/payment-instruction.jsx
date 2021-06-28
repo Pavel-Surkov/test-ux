@@ -11,15 +11,17 @@ export default function PaymentInstruction() {
 
   const finalHeaderRef = useRef(null);
 
-  useEffect( async () => {
-    const response = await fetch('./json/data.json');
+  useEffect(() => {
+    (async () => {
+      const response = await fetch('./json/data.json');
 
-    if(response.ok) {
-      const json = await response.json();
-      setData(json);
-    } else {
-      alert("Error: " + response.status);
-    }
+      if(response.ok) {
+        const json = await response.json();
+        setData(json);
+      } else {
+        alert("Error: " + response.status);
+      }
+    })()
   }, [])
 
   const handleClickCheckbox = e => {

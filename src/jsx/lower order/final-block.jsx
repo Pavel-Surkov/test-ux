@@ -1,4 +1,6 @@
-export default function FinalBlock() {
+import React from "react";
+
+export default React.memo(function FinalBlock() {
   const listItems = [
     'Пункт Система «Расчет» (ЕРИП)',
     'Образование и развитие',
@@ -22,7 +24,7 @@ export default function FinalBlock() {
       <FinalLower items={listItems}/>
     </div>
   );
-}
+})
 
 function FinalLower(props) {
   return (
