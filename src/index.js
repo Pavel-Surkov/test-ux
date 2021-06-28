@@ -30,7 +30,7 @@ checkboxesBlock.addEventListener('click', e => {
     });
     target.setAttribute('checked', '');
     const value = target.dataset.value;
-    finalHeader.innerHTML = `3. Как оплатить через ${value}`;
+    finalHeader.innerHTML = `3. Как оплатить ${value}`;
   }
 });
 
