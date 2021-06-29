@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export default function SelectPaymentField(props) {
   const methods = props.payMethods;
   const values = [
@@ -7,6 +9,14 @@ export default function SelectPaymentField(props) {
     'в банковском отделении', 
     'картой'
   ];
+
+  useEffect(() => {
+    const firstCheckbox = document.querySelector('.main__payment__block');
+    
+    if(firstCheckbox !== null) {
+      firstCheckbox.setAttribute('checked', 'true');
+    }
+  }, [methods])
 
   return (
     <div className="main__payment__methods">
