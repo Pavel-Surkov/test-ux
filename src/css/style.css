@@ -365,7 +365,7 @@
       grid-template-columns: 1fr 200px;
 }
 
-.find-us__header {
+.find-us h3 {
   font-family: "Manrope", "Arial", sans-serif;
   font-size: 1.33em;
   font-weight: 800;
@@ -373,17 +373,17 @@
   margin-bottom: 20px;
 }
 
-.find-us__list {
+.find-us ol {
   color: #989EA3;
   padding-left: 18px;
 }
 
-.find-us__item {
+.find-us li {
   font-size: 1.133em;
   line-height: 1.47;
 }
 
-.find-us__str {
+.find-us p {
   color: #112230;
   margin: 0;
 }
@@ -438,6 +438,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .bonus__label {
