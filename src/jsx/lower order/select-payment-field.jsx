@@ -11,7 +11,7 @@ export default function SelectPaymentField(props) {
   ];
 
   useEffect(() => {
-    const firstCheckbox = document.querySelector('.main__payment__block');
+    const firstCheckbox = document.querySelector('.methods__block');
     
     if(firstCheckbox !== null) {
       firstCheckbox.setAttribute('checked', 'true');
@@ -19,7 +19,7 @@ export default function SelectPaymentField(props) {
   }, [methods])
 
   return (
-    <div className="main__payment__methods">
+    <div className="methods">
       { methods.map((method, index) => {
         const value = values[index] ? values[index] : method;
 
@@ -31,12 +31,12 @@ export default function SelectPaymentField(props) {
 
         return (
           <label
-            className="main__payment__block col-lg-4" 
+            className="methods__block col-lg-4" 
             data-value={value} 
             onClick={ props.onClick }
             key={value}>
-            <p className="main__payment__method" dangerouslySetInnerHTML={{__html: method}}></p>
-            <input type="radio" className="main__payment__radio" name="payment" value={index + 1}/>
+            <p className="methods__method-text" dangerouslySetInnerHTML={{__html: method}}></p>
+            <input type="radio" className="methods__radio" name="payment" value={index + 1}/>
           </label> 
         );
       }) }      

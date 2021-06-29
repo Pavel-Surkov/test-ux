@@ -13,13 +13,15 @@ export default React.memo(function FinalBlock() {
   ];
 
   return (
-    <div className="main__final__block">
-      <p className="main__final__sum">Сумма для оплаты</p>
-      <p className="main__final__cost">790 BYN</p>
-      <a href="#" className="main__final__promo">У меня есть промо-код</a>
+    <div className="total">
+      <p className="total__sum">Сумма для оплаты</p>
+      <p className="total__cost">790 BYN</p>
+      <button href="#" className="total__promo">У меня есть промо-код</button>
       <Bonuses />
-      <div className="main__final__comment">
-        <p className="main__final__comment-text">*Скидки не суммируются. <br/>После внесения платежа, отправьте копию квитанции на <a className="main__final__email" href="mailto:hello@ux-school.by">hello@ux-school.by</a></p>
+      <div className="comment">
+        <p className="comment__text">*Скидки не суммируются. <br/>После внесения платежа, отправьте копию квитанции на 
+          <a className="comment__email" href="mailto:hello@ux-school.by">hello@ux-school.by</a>
+        </p>
       </div>
       <FinalLower items={listItems}/>
     </div>
@@ -28,13 +30,13 @@ export default React.memo(function FinalBlock() {
 
 function FinalLower(props) {
   return (
-    <div className="main__final__lower">
-        <LeftColList items={props.items}/>
-        <div className="main__final__code">
-          <img className="main__final__qr" src="./img/qr.png" width="200" alt="QR code" />
-          <p className="main__final__service-code">Код услуги: 4725501</p>
-        </div> 
-      </div>
+    <div className="total-lower">
+      <LeftColList items={props.items}/>
+      <div className="total-code">
+        <img className="total-code__qr" src="./img/qr.png" width="200" alt="QR code" />
+        <p className="total-code__service">Код услуги: 4725501</p>
+      </div> 
+    </div>
   );
 }
 
@@ -42,13 +44,13 @@ function LeftColList(props) {
   const items = props.items
 
   return (
-    <div className="main__final__find-us">
-      <h3 className="main__final__find-header">Как найти нас в ЕРИП:</h3>
-      <ol className="main__final__find-list">
+    <div className="find-us">
+      <h3>Как найти нас в ЕРИП:</h3>
+      <ol>
         { items.map( value => {
           return (
-            <li className="main__final__find-item" key={value}>
-              <p className="main__final__find-str">{value}</p>
+            <li key={value}>
+              <p>{value}</p>
             </li>
           );
         }) }
@@ -60,7 +62,7 @@ function LeftColList(props) {
 
 function Bonuses() {
   return (
-    <div className="main__final__bonus">
+    <div className="bonus">
       <BonusRow 
         text="Рассрочка на 2 месяца от UX Mind School"
         name="рассрочка" />
@@ -73,12 +75,12 @@ function Bonuses() {
 
 function BonusRow(props) {
   return (
-    <div className="main__final__row">
-      <label className="main__final__label">
-        <input className="main__final__checkbox" type="checkbox" name={props.name} />
-        <span className="main__final__slider round"></span>
-      </label>
-      <p className="main__final__text">{props.text}</p>
-    </div>
+    <label className="bonus__row">
+      <div className="bonus__label">
+        <input className="bonus__checkbox" type="checkbox" name={props.name} />
+        <span className="bonus__slider"></span>
+      </div>
+      <p className="bonus__text">{props.text}</p>
+    </label>
   );
 }

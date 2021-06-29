@@ -348,7 +348,7 @@ align-items: center;
 
 .find-us {
 
-  &__header {
+  & h3 {
     font-family: $font-stack-manrope;
     font-size: 1.33em;
     font-weight: 800;
@@ -356,17 +356,17 @@ align-items: center;
     margin-bottom: 20px;
   }
 
-  &__list {
+  & ol {
     color: $list-numbers;
     padding-left: 18px;
   }
 
-  &__item {
+  & li {
     font-size: 1.133em;
     line-height: 1.47;
   }
 
-  &__str {
+  & p {
     color: $primary-font;
     margin: 0;
   }

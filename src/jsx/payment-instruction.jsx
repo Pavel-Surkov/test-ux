@@ -25,7 +25,7 @@ export default function PaymentInstruction() {
   }, [])
 
   const handleClickCheckbox = e => {
-    const checkboxes = document.querySelectorAll('.main__payment__block');
+    const checkboxes = document.querySelectorAll('.methods__block');
     const finalHeader = finalHeaderRef.current;
 
     const target = e.target.closest('label');
