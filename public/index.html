@@ -74,90 +74,96 @@
             </select>
           </div>
         </section>
-        <section class="main__payment col-lg-9">
-          <h2 class="main__payment__header">2. Выберите способ оплаты</h2>
-          <div class="main__payment__methods">
-            <label class="main__payment__block col-lg-4" data-value="через ЕРИП" checked>
-              <p class="main__payment__method">ЕРИП</p>
-              <input type="radio" name="payment" class="main__payment__radio">
-            </label>
-            <label class="main__payment__block col-lg-4" data-value="через кредит от Альфа-банка">
-              <p class="main__payment__method">Кредит <br/>от Альфа-банка</p>
-              <input type="radio" name="payment" class="main__payment__radio">
-            </label>
-            <label class="main__payment__block col-lg-4" data-value="через рассрочку по карте «Халва»">
-              <p class="main__payment__method">Рассрочка <br/>от 2 до 9 месяцев <br/>по карте «Халва»</p>
-              <input type="radio" name="payment" class="main__payment__radio">
-            </label>
-            <label class="main__payment__block col-lg-4" data-value="в отделении банка">
-              <p class="main__payment__method">В отделении банка</p>
-              <input type="radio" name="payment" class="main__payment__radio">
-            </label>
-            <label class="main__payment__block col-lg-4" data-value="картой">
-              <p class="main__payment__method">Оплатить картой</p>
-              <input type="radio" name="payment" class="main__payment__radio">
-            </label>        
+        <section class="payment">
+          <div class="col-lg-9">
+            <h2 class="payment__header">2. Выберите способ оплаты</h2>
+            <div class="methods">
+              <label class="methods__block col-lg-4" data-value="через ЕРИП" checked>
+                <p class="methods__method-text">ЕРИП</p>
+                <input type="radio" name="payment" class="methods__radio">
+              </label>
+              <label class="methods__block col-lg-4" data-value="через кредит от Альфа-банка">
+                <p class="methods__method-text">Кредит <br/>от Альфа-банка</p>
+                <input type="radio" name="payment" class="methods__radio">
+              </label>
+              <label class="methods__block col-lg-4" data-value="через рассрочку по карте «Халва»">
+                <p class="methods__method-text">Рассрочка <br/>от 2 до 9 месяцев <br/>по карте «Халва»</p>
+                <input type="radio" name="payment" class="methods__radio">
+              </label>
+              <label class="methods__block col-lg-4" data-value="в отделении банка">
+                <p class="methods__method-text">В отделении банка</p>
+                <input type="radio" name="payment" class="methods__radio">
+              </label>
+              <label class="methods__block col-lg-4" data-value="картой">
+                <p class="methods__method-text">Оплатить картой</p>
+                <input type="radio" name="payment" class="methods__radio">
+              </label>
+            </div>
           </div>
         </section>
-        <section class="main__final col-lg-9">
-          <h2 class="main__final__header">3. Как оплатить через ЕРИП</h2>
-          <div class="main__final__block">
-            <p class="main__final__sum">Сумма для оплаты</p>
-            <p class="main__final__cost">790 BYN</p>
-            <a href="#" class="main__final__promo">У меня есть промо-код</a>
-            <div class="main__final__bonus">
-              <div class="main__final__row">
-                <label class="main__final__label">
-                  <input class="main__final__checkbox" type="checkbox" name="рассрочка">
-                  <span class="main__final__slider round"></span>
-                </label>
-                <p class="main__final__text">Рассрочка на 2 месяца от UX Mind School</p>
+        <section class="final">
+          <div class="col-lg-9">
+            <h2 class="final__header">3. Как оплатить через ЕРИП</h2>
+            <div class="total">
+              <p class="total__sum">Сумма для оплаты</p>
+              <p class="total__cost">790 BYN</p>
+              <button class="total__promo">У меня есть промо-код</button>
+              <div class="bonus">
+                <div class="bonus__row">
+                  <label class="bonus__label">
+                    <input class="bonus__checkbox" type="checkbox" name="рассрочка">
+                    <span class="bonus__slider round"></span>
+                  </label>
+                  <p class="bonus__text">Рассрочка на 2 месяца от UX Mind School</p>
+                </div>
+                <div class="bonus__row">
+                  <label class="bonus__label">
+                    <input class="bonus__checkbox" type="checkbox" name="скидка">
+                    <span class="bonus__slider round"></span>
+                  </label>
+                  <p class="bonus__text">Я студент-очник / я раньше учился у вас (скидка 10%)</p>
+                </div>
               </div>
-              <div class="main__final__row">
-                <label class="main__final__label">
-                  <input class="main__final__checkbox" type="checkbox" name="скидка">
-                  <span class="main__final__slider round"></span>
-                </label>
-                <p class="main__final__text">Я студент-очник / я раньше учился у вас (скидка 10%)</p>
+              <div class="comment">
+                <p class="comment__text">*Скидки не суммируются. <br/>После внесения платежа, отправьте копию квитанции на 
+                  <a class="comment__email" href="mailto:hello@ux-school.by">hello@ux-school.by</a>
+                </p>
               </div>
-            </div>
-            <div class="main__final__comment">
-              <p class="main__final__comment-text">*Скидки не суммируются. <br/>После внесения платежа, отправьте копию квитанции на <a class="main__final__email" href="mailto:hello@ux-school.by">hello@ux-school.by</a></p>
-            </div>
-            <div class="main__final__lower">
-              <div class="main__final__find-us">
-                <h3 class="main__final__find-header">Как найти нас в ЕРИП:</h3>
-                <ol class="main__final__find-list">
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Пункт Система «Расчет» (ЕРИП)</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Образование и развитие</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Дополнительное образование и развитие</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Тренинги, семинары, консультации</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Минск</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">ИП Колесень И.Г.</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Посещение занятий</p>
-                  </li>
-                  <li class="main__final__find-item">
-                    <p class="main__final__find-str">Ввести ФИО ученика и сумму для оплаты</p>
-                  </li>
-                </ol>
+              <div class="total-lower">
+                <div class="find-us">
+                  <h3 class="find-us__header">Как найти нас в ЕРИП:</h3>
+                  <ol class="find-us__list">
+                    <li class="find-us__item">
+                      <p class="find-us__str">Пункт Система «Расчет» (ЕРИП)</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">Образование и развитие</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">Дополнительное образование и развитие</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">Тренинги, семинары, консультации</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">Минск</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">ИП Колесень И.Г.</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">Посещение занятий</p>
+                    </li>
+                    <li class="find-us__item">
+                      <p class="find-us__str">Ввести ФИО ученика и сумму для оплаты</p>
+                    </li>
+                  </ol>
+                </div>
+                <div class="total-code">
+                  <img class="total-code__qr" src="./img/qr.png" width="200" alt="QR code">
+                  <p class="total-code__service">Код услуги: 4725501</p>
+                </div> 
               </div>
-              <div class="main__final__code">
-                <img class="main__final__qr" src="./img/qr.png" width="200" alt="QR code">
-                <p class="main__final__service-code">Код услуги: 4725501</p>
-              </div> 
             </div>
           </div>
         </section>
@@ -170,96 +176,100 @@
       <img class="footer-bg__right" src="./img/footer/footer-right.png" alt="">
       <img class="footer-bg__top-right" src="./img/footer/footer-top-right.png" alt="">
       <div class="footer__wrapper">
-        <div class="footer__container">
+        <div class="footer-top">
           <div class="col-lg-3">
-            <a href="#" class="footer__logo-link">
-              <img class="footer__logo" src="./img/footer/logo-footer.svg" alt="logo">
+            <a href="#" class="footer-top__logo-link">
+              <img class="footer-top__logo" src="./img/footer/logo-footer.svg" alt="logo">
             </a>
-            <div class="footer__media-row">
-              <a href="#" class="footer__media-link">
+            <div class="media-icons">
+              <a href="#" class="media-icons__link">
                 <img src="./img/footer/instagram.svg" alt="instagram icon">
               </a>
-              <a href="#" class="footer__media-link">
+              <a href="#" class="media-icons__link">
                 <img src="./img/footer/youtube.svg" alt="youtube icon">
               </a>
-              <a href="#" class="footer__media-link">
+              <a href="#" class="media-icons__link">
                 <img src="./img/footer/facebook.svg" alt="facebook icon">
               </a>
-              <a href="#" class="footer__media-link">
+              <a href="#" class="media-icons__link">
                 <img src="./img/footer/behance.svg" alt="behance icon">
               </a>
-              <a href="#" class="footer__media-link">
+              <a href="#" class="media-icons__link">
                 <img src="./img/footer/dribble.svg" alt="dribble icon">
               </a>
             </div>
-            <a href="#" class="footer__rating">
-              <p class="footer__rating__number">4.9</p>
-              <div class="footer__rating__stars"></div>
-              <p class="footer__rating__text">Рейтинг школы на основе отзывов в Google Maps</p>
+            <a href="#" class="rating">
+              <p class="rating__number">4.9</p>
+              <div class="rating__stars"></div>
+              <p class="rating__text">Рейтинг школы на основе отзывов в Google Maps</p>
             </a>
           </div>
-          <nav class="footer__navigation col-lg-4">
-            <ul class="footer__navigation__list col-lg-5">
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Курсы</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Частые вопросы</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Отзывы</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Преподаватели</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">О нас</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Контакты</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Бесплатные курсы</a>
-              </li>
-            </ul>
-            <ul class="footer__navigation__list col-lg-7">
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Блог</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Подарочные сертификаты</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Ищем преподавателей</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Нашли ошибку?</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Вакансии</a>
-              </li>
-              <li class="footer__navigation__item">
-                <a href="#" class="footer__navigation__link">Акции</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="footer__additional col-lg-4">
-            <p class="footer__additional__registry">Торговый реестр: 147946 2018-05-28</p>
-            <p class="footer__additional__text">
-              «Безопасный сервер WEBPAY устанавливает шифрованное соединение по защищенному протоколу TLS и конфиденциально принимает <br/>от клиента данные его пластиковой банковской карты (номер карты, имя держателя, дату окончания действия, и контрольный номер банковской карточке CVC/CVC2).»
-            </p>
-            <div class="footer__additional__links">
-              <a href="#" class="footer__additional__link">Как оплатить</a>
-              <a href="#" class="footer__additional__link">Договор оферты</a>
+          <div class="col-lg-4">
+            <nav class="footer-navigation">
+              <ul class="footer-navigation__list">
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Курсы</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Частые вопросы</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Отзывы</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Преподаватели</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">О нас</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Контакты</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Бесплатные курсы</a>
+                </li>
+              </ul>
+              <ul class="footer-navigation__list col-lg-7">
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Блог</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Подарочные сертификаты</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Ищем преподавателей</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Нашли ошибку?</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Вакансии</a>
+                </li>
+                <li class="footer-navigation__item">
+                  <a href="#" class="footer-navigation__link">Акции</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-5">
+            <div class="additional">
+              <p class="additional__registry">Торговый реестр: 147946 2018-05-28</p>
+              <p class="additional__text">
+                «Безопасный сервер WEBPAY устанавливает шифрованное соединение по защищенному протоколу TLS и конфиденциально принимает <br/>от клиента данные его пластиковой банковской карты (номер карты, имя держателя, дату окончания действия, и контрольный номер банковской карточке CVC/CVC2).»
+              </p>
+              <div class="additional__links">
+                <a href="#" class="additional__link">Как оплатить</a>
+                <a href="#" class="additional__link">Договор оферты</a>
+              </div>
+              <img class="additional__payment-row" src="img/footer/companies-top.png" alt="webpay mastercard visa белкарт расчет">
+              <img class="additional__payment-row" src="img/footer/companies-bottom.png" alt="bePaid MTBank Халва">
             </div>
-            <img class="footer__additional__payment-row" src="img/footer/companies-top.png" alt="webpay mastercard visa белкарт расчет">
-            <img class="footer__additional__payment-row" src="img/footer/companies-bottom.png" alt="bePaid MTBank Халва">
           </div>
         </div>
-        <div class="footer__bottom">
-          <p class="footer__ie">ИП Колесень И.Г., УНП 190602238. Выдано 15.10.2020 Мингорисполкомом. Режим работы: Пн-Сб с 10:00 до 20.00</p>
-          <a href="#" class="footer__confidentiality">Политика конфиденциальности</a>
-          <a href="ux-mind.pro" class="footer__website">ux-mind.pro</a>
+        <div class="footer-bottom">
+          <p class="footer-bottom__ie">ИП Колесень И.Г., УНП 190602238. Выдано 15.10.2020 Мингорисполкомом. Режим работы: Пн-Сб с 10:00 до 20.00</p>
+          <a href="#" class="footer-bottom__confidentiality">Политика конфиденциальности</a>
+          <a href="ux-mind.pro" class="footer-bottom__website">ux-mind.pro</a>
         </div>
       </div> 
     </footer>

@@ -15,9 +15,9 @@ import Payment from './jsx/payment';
   }
 })();
 
-const checkboxes = document.querySelectorAll('.main__payment__block');
-const checkboxesBlock = document.querySelector('.main__payment__methods');
-const finalHeader = document.querySelector('.main__final__header');
+const checkboxes = document.querySelectorAll('.methods__block');
+const checkboxesBlock = document.querySelector('.methods');
+const finalHeader = document.querySelector('.final__header');
 
 checkboxesBlock.addEventListener('click', e => {
   const target = e.target.closest('label');
