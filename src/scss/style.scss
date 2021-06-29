@@ -59,74 +59,75 @@ $list-numbers: #989EA3;
     display: flex;
     min-height: inherit;
   }
+}
 
-  &__logo-box {
-    min-height: inherit;
-    display: grid;
-    align-items: center;
-    width: 370px/1170px*100%;
+.contacts {
+  min-height: inherit;
+  flex-grow: 1;
+  display: grid;
+  justify-items: end;
+  grid-template-rows: 49px 1fr;
+
+  &__phone {
+    margin-top: auto;
+    font-family: $font-stack-manrope;
+    font-size: 1.333em;
+    font-weight: 800;
+    letter-spacing: -0.2px;
   }
 
-  &__menu {
-    min-height: inherit;
-    display: grid;
-    align-items: center;
-
-    &__list {
-      padding-left: 13px;
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0;
-    }
-
-    &__item {
-      list-style: none;
-      margin-right: 30px;
-    }
-
-    &__link {
-      position: relative;
-    }
-
-    &__link::after {
-      @extend %underline;
-    }
-
-    &__link[disabled] {
-      opacity: 0.3;
-    }
-
-    &__link[disabled]::after {
-      display: none;
-    }
+  &__media {
+    display: flex;
+    list-style: none;
   }
 
-  &__contacts {
-    min-height: inherit;
-    flex-grow: 1;
-    display: grid;
-    justify-items: end;
-    grid-template-rows: 49px 1fr;
+  &__link {
+    color: $links-gray;
+    font-size: 0.8em;
+    margin-left: 6px; 
+    line-height: 2;
+  }
+}
 
-    &__phone {
-      margin-top: auto;
-      font-family: $font-stack-manrope;
-      font-size: 1.333em;
-      font-weight: 800;
-      letter-spacing: -0.2px;
-    }
 
-    &__media {
-      display: flex;
-      list-style: none;
-    }
+.logo-box {
+  min-height: inherit;
+  display: grid;
+  align-items: center;
+  width: 370px/1170px*100%;
+}
 
-    &__link {
-      color: $links-gray;
-      font-size: 0.8em;
-      margin-left: 6px; 
-      line-height: 2;
-    }
+.navigation {
+min-height: inherit;
+display: grid;
+align-items: center;
+
+  &__list {
+    padding-left: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 30px;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__link::after {
+    @extend %underline;
+  }
+
+  &__link[disabled] {
+    opacity: 0.3;
+  }
+
+  &__link[disabled]::after {
+    display: none;
   }
 }
 
@@ -170,7 +171,10 @@ $list-numbers: #989EA3;
 }
 
 .main {
-  padding: 0 calc(50% - 585px);
+
+  &__wrapper {
+    padding: 0 calc(50% - 585px);
+  }
 
   &__header {
     padding-top: 48px;
@@ -178,49 +182,6 @@ $list-numbers: #989EA3;
     font-size: 3.33em;
     font-weight: 800;
     letter-spacing: -1.5px;
-  }
-
-  &__course {
-    padding-top: 41px;
-
-    &__header {
-      font-family: $font-stack-manrope;
-      font-size: 1.867em;
-      margin-bottom: 23px;
-      letter-spacing: -0.9px;
-    }
-
-    &__select {
-      background-color: $primary-white;
-      border: 1px solid $links-underline;
-      height: 50px;
-      width: 100%;
-      font-size: 1.133em;
-      font-family: $font-stack-arial;
-      padding-left: 15px; 
-      padding-right: 54px;
-      appearance: none;
-      border-radius: 5px;
-    }
-
-    &__select-wrapper {
-      position: relative;
-      max-width: 570px;
-    }
-
-    &__select-wrapper::after {
-      content: "";
-      position: absolute;
-      width: 52px;
-      height: 50px;
-      top: 0;
-      right: 0;
-      cursor: pointer;
-      pointer-events:none;
-      background: url('../background-imges/select-arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-    }
   }
 
   &__payment {
@@ -456,6 +417,49 @@ $list-numbers: #989EA3;
       margin-top: 14px;
       font-size: 1.133em;
     }
+  }
+}
+
+.course {
+  padding-top: 41px;
+
+  &__header {
+    font-family: $font-stack-manrope;
+    font-size: 1.867em;
+    margin-bottom: 23px;
+    letter-spacing: -0.9px;
+  }
+}
+
+.select-wrapper {
+  position: relative;
+  max-width: 570px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    pointer-events:none;
+    background: url('../background-imges/select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__select {
+    background-color: $primary-white;
+    border: 1px solid $links-underline;
+    height: 50px;
+    width: 100%;
+    font-size: 1.133em;
+    font-family: $font-stack-arial;
+    padding-left: 15px; 
+    padding-right: 54px;
+    appearance: none;
+    border-radius: 5px;
   }
 }
 
