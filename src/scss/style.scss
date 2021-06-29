@@ -420,6 +420,7 @@ align-items: center;
   &__row {
     margin-bottom: 24px;
     display: flex;
+    cursor: pointer;
   }
 
   &__label {
