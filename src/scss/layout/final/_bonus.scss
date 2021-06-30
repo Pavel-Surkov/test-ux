@@ -1,7 +1,10 @@
 .bonus {
   margin-top: 54px;
+  display: flex;
+  flex-direction: column;
 
   &__row {
+    margin-right: auto;
     margin-bottom: 24px;
     display: flex;
     cursor: pointer;
