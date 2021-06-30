@@ -11,7 +11,7 @@ export default function PaymentInstruction() {
 
   const finalHeaderRef = useRef(null);
 
-  useEffect(() => {
+  useEffect( () => {
     (async () => {
       const response = await fetch('./json/data.json');
 
