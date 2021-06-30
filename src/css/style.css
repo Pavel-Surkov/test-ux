@@ -51,6 +51,17 @@
   min-height: inherit;
 }
 
+.logo-box {
+  min-height: inherit;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 31.62393%;
+}
+
 .contacts {
   min-height: inherit;
   -webkit-box-flex: 1;
@@ -85,17 +96,6 @@
   font-size: 0.8em;
   margin-left: 6px;
   line-height: 2;
-}
-
-.logo-box {
-  min-height: inherit;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 31.62393%;
 }
 
 .navigation {

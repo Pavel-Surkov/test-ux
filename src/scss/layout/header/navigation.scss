@@ -1,0 +1,33 @@
+.navigation {
+min-height: inherit;
+display: grid;
+align-items: center;
+
+  &__list {
+    padding-left: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 30px;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__link::after {
+    @extend %underline;
+  }
+
+  &__link[disabled] {
+    opacity: 0.3;
+  }
+
+  &__link[disabled]::after {
+    display: none;
+  }
+}

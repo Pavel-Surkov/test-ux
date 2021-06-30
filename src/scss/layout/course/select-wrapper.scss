@@ -1,0 +1,31 @@
+.select-wrapper {
+  position: relative;
+  max-width: 570px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    pointer-events:none;
+    background: url('../background-imges/select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__select {
+    background-color: $primary-white;
+    border: 1px solid $links-underline;
+    height: 50px;
+    width: 100%;
+    font-size: 1.133em;
+    font-family: $font-stack-arial;
+    padding-left: 15px; 
+    padding-right: 54px;
+    appearance: none;
+    border-radius: 5px;
+  }
+}

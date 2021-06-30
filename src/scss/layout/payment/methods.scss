@@ -1,0 +1,67 @@
+.methods {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__header {
+    font-family: $font-stack-manrope;
+    font-size: 1.867em;
+    letter-spacing: -0.9px;
+    margin-bottom: -7px;
+  }
+
+  &__block {
+    position: relative;
+    min-height: 160px;
+    max-width: 270px;
+    min-width: 200px;
+    box-sizing: border-box;
+    border: 1px solid $links-underline;
+    border-radius: 20px; 
+    margin: 30px 30px 0 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  &__block:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &__radio {
+    position: absolute;
+    @extend %checkback;
+    top: 15px;
+    right: 15px;
+    appearance: none;
+  }
+
+  &__block[checked] {
+    border: 1px solid $primary-links;
+  }
+
+  &__block[checked] .methods__radio {
+    position: absolute;
+    @extend %checkback-on;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__block[checked] .methods__radio::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../background-imges/checkbox.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__method-text {
+    margin: 0;
+    font-size: 1.133em;
+    text-align: center;
+    line-height: 1.47;
+  }
+}
