@@ -1,0 +1,140 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 220px;
+  padding-top: 60px;
+  width: 100%;
+  background-image: url('../background-imges/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+  overflow: hidden;
+
+  &-top {
+    z-index: 1;
+    display: flex;
+  }
+
+  &__wrapper {
+    padding: 0 calc(50% - 585px);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 52px;
+  }
+
+  &-bg {
+
+    &__left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__center {
+      position: absolute;
+      top: 0;
+      left: 308px
+    }
+
+    &__right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__top-right {
+      position: absolute;
+      top: 0;
+      right: 407px;
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    margin-right: auto;
+
+    &__list {
+      padding: 0;
+      list-style: none;
+      padding-left: 7px;
+      flex-grow: 1;
+    }
+
+    &__list:last-child {
+      max-width: 224px;
+    }
+
+    &__item {
+      padding: 10px 0; 
+    }
+
+    &__item:first-child {
+      padding-top: 4px;
+    }
+
+    &__link {
+      margin: 0;
+      color: $primary-white;
+      position: relative;
+    }
+
+    &__link:hover {
+      opacity: 0.5;
+      color: $primary-white;
+    }
+
+    &__link::after {
+      @extend %underline;
+      opacity: 0.2;
+    }
+  }
+
+  &-bottom {
+    padding-left: 4px;
+    display: flex;
+    z-index: 1;
+  
+    &__ie {
+      margin: auto 0;
+      color: $primary-white;
+      line-height: 1.333em;
+      opacity: 0.5;
+    }
+    
+    &__confidentiality {
+      margin: auto 0;
+      color: $primary-white;
+      line-height: 1.333em;
+      margin-left: auto;
+      position: relative;
+      opacity: 0.5;
+    }
+    
+    &__website {
+      margin: auto 0;
+      color: $primary-white;
+      line-height: 1.333em;
+      margin-left: 15px;
+      opacity: 0.5;
+      position: relative;
+    }
+    
+    &__confidentiality::after,
+    &__website::after {
+      @extend %underline;
+      opacity: 0.15;
+    }
+    
+    &__confidentiality:hover,
+    &__website:hover {
+      opacity: 1;
+      color: $primary-white;
+    }
+  }
+}
+
+.footer-top .col-lg-5 {
+  max-width: 420px;
+  padding-top: 6px;
+  margin-left: auto;
+}

@@ -1,0 +1,25 @@
+.find-us {
+
+  & h3 {
+    font-family: $font-stack-manrope;
+    font-size: 1.33em;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    margin-bottom: 20px;
+  }
+
+  & ol {
+    color: $list-numbers;
+    padding-left: 18px;
+  }
+
+  & li {
+    font-size: 1.133em;
+    line-height: 1.47;
+  }
+
+  & p {
+    color: $primary-font;
+    margin: 0;
+  }
+}

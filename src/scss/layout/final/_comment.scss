@@ -1,0 +1,17 @@
+.comment {
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: $primary-background-blue;
+  border: 1px solid #D2F3FE;
+  height: 70px;
+  padding: 15px 24px;
+
+  &__text {
+    line-height: 1.33em;
+  }
+
+  &__email {
+    color: $primary-links;
+    text-decoration: underline;
+  }
+}

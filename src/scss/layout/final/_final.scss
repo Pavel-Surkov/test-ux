@@ -1,0 +1,14 @@
+.final {
+  padding-top: 54px;
+
+  & .col-lg-9 {
+    max-width: 870px;
+  }
+
+  &__header {
+    font-family: $font-stack-manrope;
+    font-size: 1.867em;
+    letter-spacing: -0.9px;
+    margin-bottom: 23px;
+  }
+}

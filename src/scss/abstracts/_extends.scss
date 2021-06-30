@@ -1,0 +1,24 @@
+%checkback-on {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(180deg, #3D9FF5 0%, #4C2AD5 127.5%);
+}
+
+%checkback {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: $primary-white;
+  border: 1px solid $links-underline;
+}
+
+%underline {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -8px;
+  left: 0;
+  background-color: $links-underline;
+}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+  padding: 5px 0 0 0;
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+
+  &__item {
+    margin-right: 20px;
+    position: relative;
+  }
+
+  &__item:last-child::before,
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__item:before {
+    @extend %underline;
+    bottom: -2px;
+  }
+
+  &__item::after {
+    content: "";
+    position: absolute;
+    right: -14px;
+    top: 10px;
+    width: 6px;
+    height: 4px;
+    background-image: url('../background-imges/drop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link {
+    color: $links-gray;
+    font-size: 0.8em;
+  }
+}
