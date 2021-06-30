@@ -21,9 +21,8 @@
   &__block {
     position: relative;
     min-height: 160px;
+    width: 100%;
     min-width: 200px;
-    max-width: 274px;
-    flex-grow: 1;
     box-sizing: border-box;
     border: 1px solid $links-underline;
     border-radius: 20px; 

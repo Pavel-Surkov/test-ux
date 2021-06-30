@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import FirstStep from "./first-step";
-import SecondStep from "./second-step";
-import ThirdStep from "./third-step";
+import FirstStep from "./course/first-step";
+import SecondStep from "./payment/second-step";
+import ThirdStep from "./final/third-step";
 
 export default function PaymentInstruction() {
   const [data, setData] = useState({
@@ -11,22 +11,24 @@ export default function PaymentInstruction() {
 
   const finalHeaderRef = useRef(null);
 
-  useEffect( async () => {
-    const response = await fetch('./json/data.json');
+  useEffect( () => {
+    (async () => {
+      const response = await fetch('./json/data.json');
 
-    if(response.ok) {
-      const json = await response.json();
-      setData(json);
-    } else {
-      alert("Error: " + response.status);
-    }
+      if(response.ok) {
+        const json = await response.json();
+        setData(json);
+      } else {
+        alert("Error: " + response.status);
+      }
+    })()
   }, [])
 
   const handleClickCheckbox = e => {
-    const checkboxes = document.querySelectorAll('.main__payment__block');
+    const checkboxes = document.querySelectorAll('.methods__block');
     const finalHeader = finalHeaderRef.current;
 
-    const target = e.target.closest('article');
+    const target = e.target.closest('label');
     if(target == null) return false;
     if(target.hasAttribute('checked')) {
       e.preventDefault();
