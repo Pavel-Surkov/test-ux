@@ -1,36 +1,37 @@
+// 1. font
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
 
-// 1. SCSS consts and extends
+// 2. SCSS consts and extends
 @import 
   "./abstracts/variables",
   "./abstracts/extends";
 
-// 2. basic
+// 3. basic
 @import
   "./body/body",
   "./base/main";
 
-// 3. header
+// 4. header
 @import 
   "./layout/header/header",
   "./layout/header/logo-box",
   "./layout/header/contacts",
   "./layout/header/navigation";
 
-// 4. breadcrumbs
+// 5. breadcrumbs
 @import "./layout/breadcrumbs/breadcrumbs";
 
-// 5. course block
+// 6. course block
 @import 
   "./layout/course/course",
   "./layout/course/select-wrapper";
 
-// 6. payment block
+// 7. payment block
 @import
   "./layout/payment/payment",
   "./layout/payment/methods"; 
 
-// 7. final-block
+// 8. final-block
 @import
   "./layout/final/final",
   "./layout/final/total",
@@ -38,7 +39,7 @@
   "./layout/final/comment",
   "./layout/final/find-us";
 
-// 8. footer
+// 9. footer
 @import
   "./layout/footer/footer",
   "./layout/footer/additional",
