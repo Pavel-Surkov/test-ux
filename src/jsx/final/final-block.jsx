@@ -16,7 +16,7 @@ export default React.memo(function FinalBlock() {
     <div className="total">
       <p className="total__sum">Сумма для оплаты</p>
       <p className="total__cost">790 BYN</p>
-      <button href="#" className="total__promo">У меня есть промо-код</button>
+      <button className="total__promo">У меня есть промо-код</button>
       <Bonuses />
       <div className="comment">
         <p className="comment__text">*Скидки не суммируются. <br/>После внесения платежа, отправьте копию квитанции на 
