@@ -1,5 +1,7 @@
 .bonus {
   margin-top: 54px;
+  display: flex;
+  flex-direction: column;
 
   &__row {
     margin-bottom: 24px;
