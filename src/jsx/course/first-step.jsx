@@ -1,4 +1,4 @@
-import Select from "./lower order/select";
+import Select from "./select";
 
 export default function FirstStep(props) {
   return (

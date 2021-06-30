@@ -1,4 +1,4 @@
-import FinalBlock from "./lower order/final-block";
+import FinalBlock from "./final-block";
 
 export default function ThirdStep(props) {
   return (

@@ -1,4 +1,4 @@
-import SelectPaymentField from "./lower order/select-payment-field";
+import SelectPaymentField from "./select-payment-field";
 
 export default function SecondStep(props) {
   return (

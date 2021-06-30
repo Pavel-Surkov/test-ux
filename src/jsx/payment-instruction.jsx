@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import FirstStep from "./first-step";
-import SecondStep from "./second-step";
-import ThirdStep from "./third-step";
+import FirstStep from "./course/first-step";
+import SecondStep from "./payment/second-step";
+import ThirdStep from "./final/third-step";
 
 export default function PaymentInstruction() {
   const [data, setData] = useState({

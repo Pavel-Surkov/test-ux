@@ -1,4 +1,4 @@
-import Breadcrumbs from "./breadcrumbs";
+import Breadcrumbs from "./breadcrumbs/breadcrumbs"
 import PaymentInstructionBlock from "./payment-instruction";
 
 export default function Payment() {
