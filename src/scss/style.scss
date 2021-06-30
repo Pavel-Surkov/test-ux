@@ -8,39 +8,31 @@
 
 // 3. basic
 @import
-  "./base/body",
-  "./base/main";
+  "./base/base";
 
-// 4. header
+// 4. layout
 @import 
-  "./layout/header/header",
-  "./layout/header/logo-box",
-  "./layout/header/contacts",
-  "./layout/header/navigation";
+  "./layout/header",
+  "./layout/navigation",
 
-// 5. breadcrumbs
-@import "./layout/breadcrumbs/breadcrumbs";
+  "./layout/course",
+  "./layout/select-wrapper",
 
-// 6. course block
+  "./layout/payment",
+  "./layout/methods",
+
+  "./layout/final",
+  "./layout/total",
+  "./layout/bonus",
+
+  "./layout/footer",
+  "./layout/additional";
+
+// 5. components
 @import 
-  "./layout/course/course",
-  "./layout/course/select-wrapper";
-
-// 7. payment block
-@import
-  "./layout/payment/payment",
-  "./layout/payment/methods"; 
-
-// 8. final-block
-@import
-  "./layout/final/final",
-  "./layout/final/total",
-  "./layout/final/bonus",
-  "./layout/final/comment",
-  "./layout/final/find-us";
-
-// 9. footer
-@import
-  "./layout/footer/footer",
-  "./layout/footer/additional",
-  "./layout/footer/media-icons.scss";
+  "./components/logo-box",
+  "./components/breadcrumbs",
+  "./components/find-us",
+  "./components/contacts",
+  "./components/comment",
+  "./components/media-icons";
