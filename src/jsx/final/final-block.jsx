@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default React.memo(function FinalBlock() {
   const listItems = [
@@ -61,14 +61,22 @@ function LeftColList(props) {
 
 
 function Bonuses() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = () => {
+    setIsChecked(prev => !prev);
+  }
+
   return (
     <div className="bonus">
       <BonusRow 
         text="Рассрочка на 2 месяца от UX Mind School"
-        name="рассрочка" />
+        name="рассрочка"
+        onChange={ handleChange } />
       <BonusRow 
         text="Я студент-очник / я раньше учился у вас (скидка 10%)"
-        name="скидка" />
+        name="скидка"
+        onChange={ handleChange } />
     </div>
   );
 }
@@ -77,7 +85,11 @@ function BonusRow(props) {
   return (
     <label className="bonus__row">
       <div className="bonus__label">
-        <input className="bonus__checkbox" type="checkbox" name={props.name} />
+        <input 
+        className="bonus__checkbox" 
+        type="checkbox" 
+        onChange={ props.onChange }
+        name={props.name} />
         <span className="bonus__slider"></span>
       </div>
       <p className="bonus__text">{props.text}</p>
