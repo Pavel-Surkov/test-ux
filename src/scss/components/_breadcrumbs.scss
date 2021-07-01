@@ -14,7 +14,7 @@
     display: none;
   }
 
-  &__item:before {
+  &__item::before {
     @extend %underline;
     bottom: -2px;
   }
