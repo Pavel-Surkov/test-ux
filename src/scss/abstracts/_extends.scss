@@ -10,7 +10,7 @@
   width: 30px;
   height: 30px;
   background: $primary-white;
-  border: 1px solid $links-underline;
+  border: 1px solid $primary-white-400;
 }
 
 %underline {
@@ -20,5 +20,5 @@
   height: 1px;
   bottom: -8px;
   left: 0;
-  background-color: $links-underline;
+  background-color: $primary-white-400;
 }

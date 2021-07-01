@@ -335,7 +335,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #F2F5F7;
+  background-color: #E0E6EB;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -355,7 +355,7 @@
   border-radius: 34px;
 }
 .bonus__checkbox:checked + .bonus__slider {
-  background-color: #2196F3;
+  background-color: #2698FC;
 }
 .bonus__checkbox:checked + .bonus__slider::before {
   -webkit-transform: translateX(20px);
