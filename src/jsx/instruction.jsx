@@ -1,15 +1,14 @@
-import { useState, useEffect, useRef } from "react";
-import FirstStep from "./course/course-block";
-import SecondStep from "./payment/payment-block";
-import ThirdStep from "./final/final";
+import { useState, useEffect} from "react";
+import CourseBlock from "./course/course-block";
+import PaymentBlock from "./payment/payment-block";
+import Final from "./final/final";
 
 export default function InstructionBlock() {
   const [data, setData] = useState({
     'courseType': [],
     'paymentMethods': []
   });
-
-  const finalHeaderRef = useRef(null);
+  const [headerValue, setHeaderValue] = useState('Как оплатить через ЕРИП');
 
   useEffect( () => {
     (async () => {
@@ -24,29 +23,18 @@ export default function InstructionBlock() {
     })()
   }, [])
 
-  const handleClickCheckbox = e => {
-    const checkboxes = document.querySelectorAll('.methods__block');
-    const finalHeader = finalHeaderRef.current;
-
-    const target = e.target.closest('label');
-    if(target == null) return false;
-    if(target.hasAttribute('checked')) {
-      e.preventDefault();
-    } else {
-      checkboxes.forEach(el => {
-        if(el.hasAttribute('checked')) el.removeAttribute('checked');
-      });
-      target.setAttribute('checked', '');
-      const value = target.dataset.value;
-      finalHeader.innerHTML = `3. Как оплатить ${value}`;
-    }
-  } 
+  const handleChangeCheckbox = e => {
+    const value = e.target.dataset.value;
+    setHeaderValue(`3. Как оплатить ${value}`);
+  }
 
   return (
     <>
-      <FirstStep courses={data['courseType']} />
-      <SecondStep payMethods={data['paymentMethods']} onClick={ e => handleClickCheckbox(e) } />
-      <ThirdStep finalHeaderRef={ finalHeaderRef } />
+      <CourseBlock courses={data['courseType']} />
+      <PaymentBlock
+        payMethods={data['paymentMethods']} 
+        onChange={ e => handleChangeCheckbox(e) } />
+      <Final headerValue={ headerValue } />
     </>
   );
 }

@@ -1,16 +1,5 @@
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-.methods__block[checked] .methods__radio {
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+.methods__radio:checked + .methods__method-text::before {
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -19,7 +8,7 @@
   background: linear-gradient(180deg, #3D9FF5 0%, #4C2AD5 127.5%);
 }
 
-.methods__radio {
+.methods__method-text::before {
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -176,7 +165,6 @@
   min-width: 200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #E0E6EB;
   border-radius: 20px;
   cursor: pointer;
   display: grid;
@@ -184,36 +172,59 @@
 }
 .methods__radio {
   position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.methods__method-text {
+  width: 100%;
+  height: 100%;
+  padding: 0 55px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.133em;
+  text-align: center;
+  line-height: 1.47;
+  border-radius: 20px;
+  border: 1px solid #E0E6EB;
+}
+.methods__method-text::before {
+  content: "";
+  position: absolute;
   top: 15px;
   right: 15px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.methods__block[checked] {
+.methods__radio:checked + .methods__method-text {
   border: 1px solid #2698FC;
 }
-.methods__block[checked] .methods__radio {
+.methods__radio:checked + .methods__method-text::before {
   position: absolute;
   top: 15px;
   right: 15px;
 }
-.methods__block[checked] .methods__radio::after {
+.methods__radio:checked + .methods__method-text::after {
   content: "";
   position: absolute;
-  top: 7px;
-  right: 6px;
+  top: 23px;
+  right: 22px;
   width: 15px;
   height: 15px;
   background-image: url("../background-imges/checkbox.svg");
   background-position: center;
   background-repeat: no-repeat;
-}
-.methods__method-text {
-  margin: 0;
-  font-size: 1.133em;
-  text-align: center;
-  line-height: 1.47;
 }
 
 .final {
@@ -504,15 +515,6 @@
   margin-bottom: 14px;
 }
 
-.logo-box {
-  min-height: inherit;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 31.6239316239%;
-}
-
 .breadcrumbs {
   padding: 5px 0 0 0;
   display: -webkit-box;
@@ -545,6 +547,15 @@
 .breadcrumbs__link {
   color: #5D6266;
   font-size: 0.8em;
+}
+
+.logo-box {
+  min-height: inherit;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 31.6239316239%;
 }
 
 .find-us h3 {

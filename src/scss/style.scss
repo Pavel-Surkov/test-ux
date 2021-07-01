@@ -1,6 +1,5 @@
-// 1. fonts
-@import
-  "./abstracts/fonts";
+// 1. font
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
 
 // 2. SCSS consts and extends
 @import 
@@ -31,8 +30,8 @@
 
 // 5. components
 @import 
-  "./components/logo-box",
   "./components/breadcrumbs",
+  "./components/logo-box",
   "./components/find-us",
   "./components/contacts",
   "./components/comment",
