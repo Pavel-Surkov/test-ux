@@ -28,12 +28,10 @@ export default function SelectPaymentField(props) {
         } else if(method === 'Рассрочка от 2 до 9 месяцев по карте «Халва»') {
           method = 'Рассрочка <br/>от 2 до 9 месяцев <br/>по карте «Халва»';
         }
-
         return (
-          <div className="col-lg-4">
+          <div key={value} className="col-lg-4">
             <label
-            className="methods__block" 
-            key={value}>
+            className="methods__block">
               <input type="radio" 
                 className="methods__radio" 
                 name="payment" 
