@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import CourseBlock from "./course/course-block";
-import PaymentBlock from "./payment/payment-block";
-import Final from "./final/final";
+import AlgorythmBlock from "./reuse components/algorythm-block";
+import Select from "./components/select"
+import SelectPaymentField from "./components/select-payment-field";
+import FinalBlock from "./components/final-block";
 
 export default function InstructionBlock() {
   const [data, setData] = useState({
@@ -30,11 +31,29 @@ export default function InstructionBlock() {
 
   return (
     <>
-      <CourseBlock courses={data['courseType']} />
-      <PaymentBlock
-        payMethods={data['paymentMethods']} 
-        onChange={ e => handleChangeCheckbox(e) } />
-      <Final headerValue={ headerValue } />
+      <AlgorythmBlock
+        className="course"
+        headerClassName="course__header"
+        blockClassName="select-wrapper"
+        headerText="1. Выберите тип курса">
+        <Select courses={ data['courseType'] } />
+      </AlgorythmBlock>
+      <AlgorythmBlock
+        className="payment"
+        headerClassName="payment__header"
+        blockClassName="col-lg-9"
+        headerText="2. Выберите способ оплаты">
+        <SelectPaymentField 
+          payMethods={ data['paymentMethods'] } 
+          onChange={ e => handleChangeCheckbox(e) } />
+      </AlgorythmBlock>
+      <AlgorythmBlock
+        className="final"
+        headerClassName="final__header"
+        blockClassName="col-lg-9"
+        headerText={ headerValue }>
+        <FinalBlock />
+      </AlgorythmBlock>
     </>
   );
 }

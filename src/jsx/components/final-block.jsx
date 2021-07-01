@@ -28,6 +28,7 @@ export default React.memo(function FinalBlock() {
   );
 })
 
+// Нижний блок
 function FinalLower(props) {
   return (
     <div className="total-lower">
@@ -40,6 +41,7 @@ function FinalLower(props) {
   );
 }
 
+// Список внизу final-block
 function LeftColList(props) {
   const items = props.items
 
@@ -59,7 +61,8 @@ function LeftColList(props) {
   );
 }
 
-
+// Блок с чекбоксами. 
+// Состояние добавил с рассчетом, что чекбоксы будут влиять на сумму.
 function Bonuses() {
   const [isChecked, setIsChecked] = useState(false);
 

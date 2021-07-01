@@ -10,11 +10,12 @@ export default function SelectPaymentField(props) {
     'картой'
   ];
 
+  // Устанавливает 1-й чекбокс в состояние checked
   useEffect(() => {
-    const firstCheckbox = document.querySelector('.methods__block');
+    const firstCheckbox = document.querySelector('.methods__radio');
     
     if(firstCheckbox !== null) {
-      firstCheckbox.setAttribute('checked', 'true');
+      firstCheckbox.checked = true;
     }
   }, [methods])
 
@@ -28,6 +29,7 @@ export default function SelectPaymentField(props) {
         } else if(method === 'Рассрочка от 2 до 9 месяцев по карте «Халва»') {
           method = 'Рассрочка <br/>от 2 до 9 месяцев <br/>по карте «Халва»';
         }
+
         return (
           <div key={value} className="col-lg-4">
             <label

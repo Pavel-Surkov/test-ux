@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
         }
         return (
           <li className="breadcrumbs__item" key={crumb}>
-            <a href="#" className="breadcrumbs__link" active="true">{crumb}</a>
+            <a href="#" className="breadcrumbs__link" active="active">{crumb}</a>
           </li>
         );
       }) }

@@ -1,4 +1,4 @@
-import Breadcrumbs from "./breadcrumbs/breadcrumbs"
+import Breadcrumbs from "./components/breadcrumbs"
 import InstructionBlock from "./instruction";
 
 export default function Main() {
