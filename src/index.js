@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/normalize.css';
 import './css/style.css';
-import Payment from './jsx/payment';
+import Main from './jsx/main';
 
-ReactDOM.render(<Payment />, document.getElementById('main'));
+ReactDOM.render(<Main />, document.getElementById('main'));

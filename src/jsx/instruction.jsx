@@ -3,7 +3,7 @@ import FirstStep from "./course/course-block";
 import SecondStep from "./payment/payment-block";
 import ThirdStep from "./final/final";
 
-export default function PaymentInstruction() {
+export default function InstructionBlock() {
   const [data, setData] = useState({
     'courseType': [],
     'paymentMethods': []

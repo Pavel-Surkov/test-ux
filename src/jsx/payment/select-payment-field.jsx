@@ -37,7 +37,11 @@ export default function SelectPaymentField(props) {
             onClick={ props.onClick }
             key={value}>
               <p className="methods__method-text" dangerouslySetInnerHTML={{__html: method}}></p>
-              <input type="radio" className="methods__radio" name="payment" value={index + 1}/>
+              <input type="radio" 
+                className="methods__radio" 
+                name="payment" 
+                value={index + 1}
+                 />
             </label> 
           </div>
         );
