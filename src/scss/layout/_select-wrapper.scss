@@ -11,9 +11,7 @@
     right: 0;
     cursor: pointer;
     pointer-events:none;
-    background: url('../background-imges/select-arrow.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url('../background-imges/select-arrow.svg') no-repeat center;
   }
 
   &__select {

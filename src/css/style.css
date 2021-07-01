@@ -120,9 +120,7 @@
   right: 0;
   cursor: pointer;
   pointer-events: none;
-  background: url("../background-imges/select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../background-imges/select-arrow.svg") no-repeat center;
 }
 .select-wrapper__select {
   background-color: #FFF;
@@ -233,9 +231,7 @@
   right: 22px;
   width: 15px;
   height: 15px;
-  background-image: url("../background-imges/checkbox.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../background-imges/checkbox.svg") no-repeat center;
 }
 
 .final {
@@ -372,9 +368,7 @@
   margin-top: 220px;
   padding-top: 60px;
   width: 100%;
-  background-image: url("../background-imges/footer-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../background-imges/footer-bg.jpg") no-repeat center;
   height: 450px;
   overflow: hidden;
 }
@@ -551,9 +545,7 @@
   top: 10px;
   width: 6px;
   height: 4px;
-  background-image: url("../background-imges/drop.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../background-imges/drop.svg") no-repeat center;
 }
 .breadcrumbs__link {
   color: #5D6266;
@@ -671,8 +663,7 @@
   height: 15px;
   top: 10px;
   right: 10px;
-  background-image: url("../background-imges/footer-link.svg");
-  background-repeat: no-repeat;
+  background: url("../background-imges/footer-link.svg") no-repeat;
 }
 .rating__number {
   font-family: "Manrope", "Arial", sans-serif;
@@ -684,9 +675,7 @@
   height: 20px;
   margin-left: 6px;
   width: 95px;
-  background-image: url("../background-imges/rate-star.svg");
-  background-position: left center;
-  background-repeat: space no-repeat;
+  background: url("../background-imges/rate-star.svg") left center space no-repeat;
   background-size: 16px;
 }
 .rating__text {
