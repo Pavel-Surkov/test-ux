@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import CourseBlock from "./course/course-block";
 import PaymentBlock from "./payment/payment-block";
 import Final from "./final/final";
@@ -8,7 +8,7 @@ export default function InstructionBlock() {
     'courseType': [],
     'paymentMethods': []
   });
-  const [headerValue, setHeaderValue] = useState('Как оплатить через ЕРИП');
+  const [headerValue, setHeaderValue] = useState('3. Как оплатить через ЕРИП');
 
   useEffect( () => {
     (async () => {
