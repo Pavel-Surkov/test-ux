@@ -1,17 +1,21 @@
 // 1. fonts
 @import 
   "./abstracts/fonts";
+
+// 2. normalize
+@import 
+  "./venders/normalize.scss";
   
-// 2. SCSS consts and extends
+// 3. SCSS consts and extends
 @import 
   "./abstracts/variables",
   "./abstracts/extends";
 
-// 3. basic
+// 4. basic
 @import
   "./base/base";
 
-// 4. layout
+// 5. layout
 @import 
   "./layout/header",
   "./layout/navigation",
@@ -29,7 +33,7 @@
   "./layout/footer",
   "./layout/additional";
 
-// 5. components
+// 6. components
 @import 
   "./components/breadcrumbs",
   "./components/logo-box",
