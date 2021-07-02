@@ -4,7 +4,7 @@ import SelectPaymentField from "./components/select-payment-field";
 import FinalBlock from "./components/final-block";
 import Select from "./components/select";
 
-export default function InstructionBlock() {
+export default function Instruction() {
   const [data, setData] = useState({
     courseType: [],
     paymentMethods: []
