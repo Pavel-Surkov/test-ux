@@ -6,11 +6,12 @@ import Select from "./components/select";
 
 export default function InstructionBlock() {
   const [data, setData] = useState({
-    'courseType': [],
-    'paymentMethods': []
+    courseType: [],
+    paymentMethods: []
   });
   const [headerValue, setHeaderValue] = useState('3. Как оплатить через ЕРИП');
 
+  // Получает данные из JSON
   useEffect( () => {
     (async () => {
       const response = await fetch('./json/data.json');
@@ -24,6 +25,7 @@ export default function InstructionBlock() {
     })()
   }, [])
 
+  // Меняет текст заголовка в блоке при изменении способа оплаты
   const handleChangeCheckbox = e => {
     const value = e.target.dataset.value;
     setHeaderValue(`3. Как оплатить ${value}`);
@@ -36,7 +38,7 @@ export default function InstructionBlock() {
         headerClassName="course__header"
         blockClassName="select-wrapper"
         headerText="1. Выберите тип курса">
-        <Select courses={ data['courseType'] } />
+        <Select courses={ data.courseType } />
       </AlgorythmBlock>
       <AlgorythmBlock
         className="payment"
@@ -44,7 +46,7 @@ export default function InstructionBlock() {
         blockClassName="col-lg-9"
         headerText="2. Выберите способ оплаты">
         <SelectPaymentField 
-          payMethods={ data['paymentMethods'] } 
+          payMethods={ data.paymentMethods } 
           onChange={ e => handleChangeCheckbox(e) } />
       </AlgorythmBlock>
       <AlgorythmBlock
