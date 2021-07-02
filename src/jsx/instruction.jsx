@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import AlgorythmBlock from "./reuse components/algorythm-block";
-import Select from "./components/select"
+import AlgorythmBlock from "./reuse-components/algorythm-block";
 import SelectPaymentField from "./components/select-payment-field";
 import FinalBlock from "./components/final-block";
+import Select from "./components/select";
 
 export default function InstructionBlock() {
   const [data, setData] = useState({

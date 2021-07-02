@@ -28,7 +28,7 @@ export default React.memo(function FinalBlock() {
   );
 })
 
-// Нижний блок
+//Нижний блок с QR кодом и списком
 function FinalLower(props) {
   return (
     <div className="total-lower">
@@ -41,7 +41,6 @@ function FinalLower(props) {
   );
 }
 
-// Список внизу final-block
 function LeftColList(props) {
   const items = props.items
 

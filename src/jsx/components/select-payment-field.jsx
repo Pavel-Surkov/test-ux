@@ -24,12 +24,15 @@ export default function SelectPaymentField(props) {
       { methods.map((method, index) => {
         const value = values[index] ? values[index] : method;
 
+        // Или добавлять переносы так, или изначально прописывать их в JSON.
         if(method === 'Кредит от Альфа-банка')  {
           method = 'Кредит <br/>от Альфа-банка';
         } else if(method === 'Рассрочка от 2 до 9 месяцев по карте «Халва»') {
           method = 'Рассрочка <br/>от 2 до 9 месяцев <br/>по карте «Халва»';
         }
 
+        // Добавляет текст в чекбоксы через dangerouslySetInnerHTML, 
+        // чтобы <br/> читался как HTML. 
         return (
           <div key={value} className="col-lg-4">
             <label

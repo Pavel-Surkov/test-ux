@@ -1,4 +1,4 @@
-// Блок алгоритма: такой как final, payment и course
+// Блок алгоритма - "скелет" для блоков final, payment и course
 export default function AlgorythmBlock(props) {
   return (
     <section className={props.className}>
