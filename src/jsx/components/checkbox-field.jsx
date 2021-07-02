@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 
-export default function SelectPaymentField(props) {
+export default function CheckboxField(props) {
   const methods = props.payMethods;
+
+  // values - строки для изменения заголовка. 
+  // Также можно было использовать вместо массива объект.
   const values = [
     'через ЕРИП', 
     'через кредит от Альфа-банка', 

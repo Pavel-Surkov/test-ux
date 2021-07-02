@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import AlgorythmBlock from "./reuse-components/algorythm-block";
-import SelectPaymentField from "./components/select-payment-field";
+import CheckboxField from "./components/checkbox-field";
 import FinalBlock from "./components/final-block";
 import Select from "./components/select";
 
@@ -45,7 +45,7 @@ export default function Instruction() {
         headerClassName="payment__header"
         blockClassName="col-lg-9"
         headerText="2. Выберите способ оплаты">
-        <SelectPaymentField 
+        <CheckboxField
           payMethods={ data.paymentMethods } 
           onChange={ e => handleChangeCheckbox(e) } />
       </AlgorythmBlock>
