@@ -783,6 +783,9 @@ input {
           align-items: center;
   width: 31.6239316239%;
 }
+.logo-box__link {
+  margin-right: auto;
+}
 
 .find-us h3 {
   font-family: "Manrope", "Arial", sans-serif;

@@ -3,4 +3,8 @@
   display: grid;
   align-items: center;
   width: 370px/1170px*100%;
+
+  &__link {
+    margin-right: auto;
+  }
 }
